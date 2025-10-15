@@ -64,7 +64,7 @@ display_width = 640
 for key in trigger_images:
     trigger_images[key] = cv2.resize(trigger_images[key], (display_width, display_height))
 
-# Fallback neutral display if needed
+# Default set to neutral expression
 neutral_display = trigger_images.get("neutral", np.zeros((display_height, display_width, 3), dtype=np.uint8))
 
 # Webcam setup
