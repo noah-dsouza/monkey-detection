@@ -15,7 +15,7 @@ dataloader = DataLoader(dataset, batch_size=4, shuffle=True)
 print("Classes:", dataset.classes)
 print("Total images:", len(dataset))
 
-# Define CNN
+# Set up cnn
 class SimpleCNN(nn.Module):
     def __init__(self, num_classes):
         super().__init__()
