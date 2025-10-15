@@ -4,7 +4,6 @@ import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
 
-# Load and transform images
 transform = transforms.Compose([
     transforms.Resize((64, 64)),
     transforms.ToTensor()
