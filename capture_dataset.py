@@ -5,11 +5,10 @@ import time
 expressions = ["expression1", "expression2", "expression3", "neutral"]
 base_dir = "images"
 
-# Create folders if they don't exist
 for expr in expressions:
     os.makedirs(os.path.join(base_dir, expr), exist_ok=True)
 
-# Setup webcam
+# Webcam
 cap = cv2.VideoCapture(0)
 cap.set(3, 640)
 cap.set(4, 480)
