@@ -98,7 +98,7 @@ while True:
     # Scrap low confidence predictions
     print(f"Detected: {label} | Confidence: {confidence_value:.2f} | Trigger: {trigger_path}")
 
-    # Add text overlay to webcam feed
+    # Text overlay
     cv2.putText(frame, f"{label} ({confidence_value:.2f})", (20, 40),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
