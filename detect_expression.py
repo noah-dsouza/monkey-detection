@@ -102,7 +102,7 @@ while True:
     cv2.putText(frame, f"{label} ({confidence_value:.2f})", (20, 40),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
-    # Get matching trigger image
+    # Fetch image
     display_img = trigger_images.get(label, neutral_display)
 
     # Combine webcam and trigger image horizontally
