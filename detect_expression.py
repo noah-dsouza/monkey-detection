@@ -81,7 +81,7 @@ while True:
     if not ret:
         break
 
-    # Convert webcam frame to tensor
+    # Frame to tensor
     pil_img = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
     img_tensor = transform(pil_img).unsqueeze(0).to(device)
 
