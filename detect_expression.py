@@ -58,7 +58,7 @@ for expr in expressions:
     else:
         print(f"Warning: Missing {img_path}")
 
-# Resize all trigger images to match webcam window
+# Resize images for webcam window
 display_height = 480
 display_width = 640
 for key in trigger_images:
