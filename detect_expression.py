@@ -72,7 +72,7 @@ cap = cv2.VideoCapture(0)
 cap.set(3, display_width)
 cap.set(4, display_height)
 
-# Make sure window is large enough to show both sides
+# Window spacing so split screen 
 cv2.namedWindow("Expression Split View", cv2.WINDOW_NORMAL)
 cv2.resizeWindow("Expression Split View", 1280, 480)
 
