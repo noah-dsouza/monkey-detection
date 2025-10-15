@@ -60,7 +60,6 @@ Used for:
 
 ## 🚀 How to Run the Project
 
-### Create & Activate a Virtual Environment
 ```bash
 python3 -m venv venv
 source venv/bin/activate
