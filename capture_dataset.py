@@ -2,7 +2,6 @@ import cv2
 import os
 import time
 
-# The expressions you want to collect
 expressions = ["expression1", "expression2", "expression3", "neutral"]
 base_dir = "images"
 
