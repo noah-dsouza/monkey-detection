@@ -105,7 +105,7 @@ while True:
     # Fetch image
     display_img = trigger_images.get(label, neutral_display)
 
-    # Combine webcam and trigger image horizontally
+    # Webcam and trigger image on same plane
     if display_img is not None and display_img.shape == frame.shape:
         combined = np.hstack((frame, display_img))
     else:
