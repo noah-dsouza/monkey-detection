@@ -85,7 +85,7 @@ while True:
     pil_img = Image.fromarray(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB))
     img_tensor = transform(pil_img).unsqueeze(0).to(device)
 
-    # Predict
+    # Prediction
     with torch.no_grad():
         output = model(img_tensor)
         probs = torch.softmax(output, dim=1)
@@ -95,7 +95,7 @@ while True:
     label = expressions[pred.item()] if confidence_value > 0.6 else "neutral"
     trigger_path = f"triggers/{label}.jpg"
 
-    # Print debug info to terminal
+    # Scrap low confidence predictions
     print(f"Detected: {label} | Confidence: {confidence_value:.2f} | Trigger: {trigger_path}")
 
     # Add text overlay to webcam feed
