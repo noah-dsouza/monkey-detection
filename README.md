@@ -2,8 +2,8 @@
 ### Real-Time Facial Expression Recognition using Deep Learning & Computer Vision
 
 This project is a real-time **facial expression recognition system** built from scratch using **PyTorch**, **OpenCV**, and **Python**.  
-It classifies facial expressions captured from a webcam and displays a matching trigger image on screen — all happening live.
-
+It classifies facial expressions captured from a webcam and displays a matching monkey meme on screen — all happening live.
+ 
 ---
 
 ## 🧠 Core Concepts
