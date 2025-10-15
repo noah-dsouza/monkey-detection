@@ -34,7 +34,7 @@ dataset = datasets.ImageFolder("images", transform=transforms.ToTensor())
 expressions = dataset.classes
 num_classes = len(expressions)
 
-# Load trained model
+# Load model
 model = SimpleCNN(num_classes).to(device)
 model.load_state_dict(torch.load("expression_model.pth", map_location=device))
 model.eval()
