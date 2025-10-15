@@ -111,10 +111,8 @@ while True:
     else:
         combined = frame
 
-    # Show combined view
     cv2.imshow("Expression Split View", combined)
-
-    # Exit on ESC key
+    
     if cv2.waitKey(1) == 27:
         break
 
