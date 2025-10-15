@@ -6,13 +6,13 @@ It classifies facial expressions captured from a webcam and displays a matching 
 
 ---
 
-## 🧠 Core Concept
+## 🧠 Core Concepts
 I trained a **Convolutional Neural Network (CNN)** to recognize facial expressions and gestures from nearly 500 images of my own face.  
 Using **OpenCV**, I stream video frames from the webcam, preprocess them, feed them to the model, and visualize the prediction side-by-side with a trigger image that corresponds to the detected emotion.
 
 ---
 
-## ⚙️ Tech Stack Breakdown
+## ⚙️ Tech Stack 
 
 ### 🧩 **Python 3.13**
 The base language for the entire project
