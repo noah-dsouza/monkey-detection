@@ -6,7 +6,7 @@ from PIL import Image
 import numpy as np
 import os
 
-# CNN model
+# Model cnn
 class SimpleCNN(nn.Module):
     def __init__(self, num_classes):
         super().__init__()
