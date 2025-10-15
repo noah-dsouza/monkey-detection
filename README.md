@@ -7,7 +7,7 @@ It classifies facial expressions captured from a webcam and displays a matching 
 ---
 
 ## 🧠 Core Concept
-I trained a **Convolutional Neural Network (CNN)** to recognize facial expressions (happy, neutral, etc.) from images of my own face.  
+I trained a **Convolutional Neural Network (CNN)** to recognize facial expressions and gestures from nearly 500 images of my own face.  
 Using **OpenCV**, I stream video frames from the webcam, preprocess them, feed them to the model, and visualize the prediction side-by-side with a trigger image that corresponds to the detected emotion.
 
 ---
@@ -15,29 +15,28 @@ Using **OpenCV**, I stream video frames from the webcam, preprocess them, feed t
 ## ⚙️ Tech Stack Breakdown
 
 ### 🧩 **Python 3.13**
-The base language for the entire project — chosen for its deep learning ecosystem and extensive computer vision libraries.
+The base language for the entire project
 
 ### 🔥 **PyTorch**
 Used to:
 - Build a fully custom **CNN model** (no pre-trained weights).
 - Handle **tensor operations**, **forward propagation**, and **softmax classification**.
-- Train and evaluate the model efficiently using GPU acceleration (via Apple’s MPS backend).
+- Train and evaluate the model efficiently using GPU acceleration via Apple’s MPS backend.
 
 ### 🎥 **OpenCV**
 Used to:
 - Capture frames from the webcam in real-time.
 - Display live video feeds and trigger images in a single window.
 - Handle color space conversions and image resizing.
-- Perform efficient I/O operations for dataset creation and inference.
 
 ### 🧠 **NumPy**
 Used for:
-- Frame concatenation (merging webcam feed and trigger images).
+- Merging the webcam feed and trigger images.
 - Efficient numeric operations while handling real-time image arrays.
 
 ### 🖼️ **Pillow (PIL)**
 Used to:
-- Convert OpenCV frames into format compatible with PyTorch transforms.
+- Convert OpenCV frames into a format compatible with PyTorch transforms.
 - Resize and preprocess images before feeding them to the model.
 
 ### 🧰 **Torchvision**
@@ -45,10 +44,6 @@ Used for:
 - `ImageFolder` — automatically managing labeled training data.
 - Data transformations like `Resize()` and `ToTensor()`.
 - Streamlining dataset management for the CNN.
-
-### 🧪 **MediaPipe (optional in earlier versions)**
-Initially explored for face tracking and landmark detection before switching fully to CNN-based classification.  
-Learned how to preprocess and crop faces effectively for ML tasks.
 
 ---
 
@@ -65,7 +60,24 @@ Learned how to preprocess and crop faces effectively for ML tasks.
 
 ## 🚀 How to Run the Project
 
-### 1️⃣ Create & Activate a Virtual Environment
+### Create & Activate a Virtual Environment
 ```bash
 python3 -m venv venv
 source venv/bin/activate
+
+### Install Dependencies 
+python3 -m pip install --upgrade pip --break-system-packages
+python3 -m pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu --break-system-packages
+python3 -m pip install opencv-python pillow numpy
+
+### Capture Training Data
+python3 capture_dataset.py
+
+### Train the Model
+python3 train_model.py
+
+### Run the program live with webcam
+python3 detect_expression.py
+
+
+
