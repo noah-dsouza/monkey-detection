@@ -26,10 +26,9 @@ class SimpleCNN(nn.Module):
     def forward(self, x):
         return self.net(x)
 
-# Select device
 device = "mps" if torch.backends.mps.is_available() else "cpu"
 
-# Load dataset to get class names
+# Load data
 from torchvision import datasets
 dataset = datasets.ImageFolder("images", transform=transforms.ToTensor())
 expressions = dataset.classes
