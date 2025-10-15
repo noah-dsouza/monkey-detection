@@ -43,7 +43,7 @@ model = SimpleCNN(num_classes).to(device)
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.Adam(model.parameters(), lr=0.001)
 
-# Training loop
+# Training 
 epochs = 15
 for epoch in range(epochs):
     running_loss = 0.0
