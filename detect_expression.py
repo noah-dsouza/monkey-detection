@@ -45,7 +45,7 @@ transform = transforms.Compose([
     transforms.ToTensor()
 ])
 
-# Load trigger images
+# Load triggers
 trigger_images = {}
 for expr in expressions:
     img_path = f"triggers/{expr}.jpg"
