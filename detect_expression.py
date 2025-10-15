@@ -39,7 +39,7 @@ model = SimpleCNN(num_classes).to(device)
 model.load_state_dict(torch.load("expression_model.pth", map_location=device))
 model.eval()
 
-# Image preprocessing
+# Preprocess
 transform = transforms.Compose([
     transforms.Resize((64, 64)),
     transforms.ToTensor()
